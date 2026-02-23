@@ -194,7 +194,106 @@ footer{padding:20px;text-align:center;background:#111;color:#777;}
 @keyframes fadeOut{
     to{opacity:0;visibility:hidden;}
 }
+/* Hero Section – الصورة جنب الاسم ثابتة */
+.hero-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap; /* يمنع الصورة من الانتقال تحت الاسم */
+}
 
+/* Hero Image – حجم ثابت لجميع الشاشات */
+.hero-img-container img {
+  width: 150px;      /* ثابت */
+  height: 150px;     /* ثابت */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 30px #00bfff;
+  animation: float 3s ease-in-out infinite;
+  transition: 0.5s;
+}
+
+/* Hero Name – قابل للتصغير على الشاشات الصغيرة لكن الصورة ثابتة */
+.hero-header h1 {
+  font-size: clamp(28px, 5vw, 65px); 
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* Typing Text */
+.typing {
+  font-size: clamp(14px, 2.5vw, 20px);
+}
+
+/* Buttons */
+.btn, .engineer-card button {
+  padding: 12px 25px;
+  font-size: 14px;
+}
+
+/* Engineer Card */
+.engineer-card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 60px 10%;
+  flex-direction: column;
+}
+
+/* Social Icons */
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+}
+
+/* Project Cards */
+.card {
+  width: 280px;
+  margin: 10px;
+}
+
+/* Section Padding */
+section {
+  padding: 100px 10%;
+}
+
+/* Footer */
+footer {
+  padding: 20px 10%;
+}
+
+/* Small screens adjustments – بدون تغيير حجم الصورة */
+@media (max-width: 768px) {
+  .hero-header h1 {
+    font-size: 50px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .typing {
+    font-size: 16px;
+  }
+  .btn, .engineer-card button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  section {
+    padding: 50px 5%;
+  }
+}
 </style>
 </head>
 <body>
@@ -291,4 +390,5 @@ particlesJS("particles-js",{particles:{number:{value:60,density:{enable:true,val
 </script>
 
 </body>
+
 </html>
