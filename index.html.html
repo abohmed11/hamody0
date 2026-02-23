@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
- 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MOHAMED HAMDY | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-
-
-
-
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;background:#111;color:white;overflow-x:hidden;position:relative;}
 body::before{content:"";position:fixed;width:200%;height:200%;background:linear-gradient(45deg,#00bfff,#111);background-size:400% 400%;animation:gradientMove 15s ease infinite;z-index:-2;opacity:0.15;}
@@ -21,64 +15,54 @@ body::before{content:"";position:fixed;width:200%;height:200%;background:linear-
 .toggle-btn{position:fixed;top:20px;right:20px;padding:10px 15px;background:#00bfff;color:#111;font-weight:600;border:none;border-radius:10px;cursor:pointer;z-index:999;transition:0.3s;}
 .toggle-btn:hover{background:#00f5ff;}
 
- 
- .hero{
+.hero{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:100px 20px; /* بدل 10% */
+  padding:100px 20px;
   gap:20px;
   width:100%;
 }
- 
- .hero-header{
+
+.hero-header{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:20px;
-  flex-wrap:wrap; /* يمنع الكسر */
+  flex-wrap:wrap;
   text-align:center;
 }
 
-
-.logo{
-    position:fixed;
-    top:25px;
-    left:40px;
-    font-family:'Orbitron', sans-serif;
-    font-size:22px;
-    font-weight:700;
-    letter-spacing:2px;
-    cursor:pointer;
-    z-index:1000;
-}
-
-.logo span{
-    color:#00bfff;
-}
-
-.logo:hover{
-    text-shadow:0 0 15px #00bfff;
-    transform:scale(1.05);
-    transition:0.3s;
-}
 .hero-header h1{
-    font-family:'Orbitron', sans-serif;
-    font-size:clamp(28px, 6vw, 65px);
+  font-family:'Orbitron', sans-serif;
+  font-size:clamp(28px, 6vw, 50px);
+  background:linear-gradient(90deg,#00bfff,#00f5ff);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  margin:0;
 }
 
- {
-    font-size:65px;
-    background:linear-gradient(90deg,#00bfff,#00f5ff);
-    background-clip:text;
-    -webkit-background-clip:text;
-    color:transparent;
-    -webkit-text-fill-color:transparent;
+.hero-img-container{
+  width:150px;
+  max-width:40%;
 }
-.hero-img-container img{width:150px;border-radius:50%;box-shadow:0 0 30px #00bfff;animation:float 3s ease-in-out infinite;transition:0.5s;}
+
+.hero-img-container img{
+  width:100%;
+  height:auto;
+  border-radius:50%;
+  box-shadow:0 0 30px #00bfff;
+  animation:float 3s ease-in-out infinite;
+  transition:0.5s;
+}
+
 .hero-img-container img:hover{transform:translateY(-10px) rotateY(10deg);}
+
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+
 .subtitle{color:#ccc;font-size:18px;}
 .typing{margin-top:10px;color:#00bfff;font-weight:600;font-size:20px;}
 .btn{margin-top:20px;padding:14px 35px;border-radius:30px;border:none;background:linear-gradient(90deg,#00bfff,#00f5ff);color:white;font-weight:600;cursor:pointer;transition:0.4s;}
@@ -87,12 +71,12 @@ body::before{content:"";position:fixed;width:200%;height:200%;background:linear-
 .social-icons a{color:#00bfff;font-size:28px;transition:0.3s;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);}
 .social-icons a:hover{color:#00f5ff;transform:scale(1.2);box-shadow:0 0 15px #00bfff;}
 
- section{
+section{
   padding:100px 20px;
   text-align:center;
   width:100%;
 }
- .skills .progress{background:#222;border-radius:20px;overflow:hidden;margin:10px 0;}
+.skills .progress{background:#222;border-radius:20px;overflow:hidden;margin:10px 0;}
 .skills .progress div{height:10px;background:linear-gradient(90deg,#00bfff,#00f5ff);}
 .card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:20px;padding:30px;margin:20px;display:inline-block;width:280px;transition:0.4s;cursor:pointer;position:relative;}
 .card:hover{transform:translateY(-15px) rotateY(5deg);box-shadow:0 0 25px #00bfff;}
@@ -101,7 +85,6 @@ body::before{content:"";position:fixed;width:200%;height:200%;background:linear-
 .reveal{opacity:0;transform:translateY(40px);transition:1s;}
 .reveal.active{opacity:1;transform:translateY(0);}
 footer{padding:20px;text-align:center;background:#111;color:#777;}
-
 
 #intro{
     position:fixed;
@@ -129,7 +112,6 @@ footer{padding:20px;text-align:center;background:#111;color:#777;}
     letter-spacing:4px;
     animation:zoomIn 1.5s ease;
 }
-
 
 .engineer-card{
   display:flex;
@@ -191,8 +173,6 @@ footer{padding:20px;text-align:center;background:#111;color:#777;}
   box-shadow:0 0 15px #00bfff;
 }
 
-
-
 #intro p{
     margin-top:15px;
     color:#aaa;
@@ -215,11 +195,6 @@ footer{padding:20px;text-align:center;background:#111;color:#777;}
     to{opacity:0;visibility:hidden;}
 }
 
-
-
-
-
-
 section, .social-icons {
   width: 100%;
   max-width: 1200px;
@@ -227,26 +202,18 @@ section, .social-icons {
   margin-right: auto;
 }
 
-
-
-
-
-  html, body{
+html, body{
   max-width:100%;
   overflow-x:hidden;
 }
-  
 </style>
 </head>
 <body>
 
-
-
 <header class="logo">
   ABO <span>HAMDY</span>
 </header>
-  
-  <!-- Intro Screen -->
+
 <div id="intro">
     <h1>ABO HAMDY</h1>
     <p>Building The Future...</p>
@@ -274,7 +241,6 @@ section, .social-icons {
     <button onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
   </div>
 </section>
-
 
 <div class="social-icons">
   <a href="https://wa.me/201103960136" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -339,10 +305,7 @@ particlesJS("particles-js",{particles:{number:{value:60,density:{enable:true,val
 </script>
 
 </body>
-
 </html>
-
-
 
 
 
