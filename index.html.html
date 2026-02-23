@@ -68,14 +68,15 @@ body::before{content:"";position:fixed;width:200%;height:200%;background:linear-
     font-size:clamp(28px, 6vw, 65px);
 }
 
- 
+ {
     font-size:65px;
     background:linear-gradient(90deg,#00bfff,#00f5ff);
     background-clip:text;
     -webkit-background-clip:text;
     color:transparent;
     -webkit-text-fill-color:transparent;
-}.hero-img-container img{width:150px;border-radius:50%;box-shadow:0 0 30px #00bfff;animation:float 3s ease-in-out infinite;transition:0.5s;}
+}
+.hero-img-container img{width:150px;border-radius:50%;box-shadow:0 0 30px #00bfff;animation:float 3s ease-in-out infinite;transition:0.5s;}
 .hero-img-container img:hover{transform:translateY(-10px) rotateY(10deg);}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
 .subtitle{color:#ccc;font-size:18px;}
@@ -340,6 +341,7 @@ particlesJS("particles-js",{particles:{number:{value:60,density:{enable:true,val
 </body>
 
 </html>
+
 
 
 
